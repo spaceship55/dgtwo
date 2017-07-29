@@ -1,0 +1,40 @@
+/* variables */
+
+// breakpoints, declared here AND in grid.scss, since we run the sass compiler before we concat dg.scss & grid.scss'
+//if you need to change them, change them in both places.
+
+//breakpoint are 30px larger than the containers, to account for padding and stuff
+$bp-xs: 360px;//galaxy phones, iphones from gen 5 and back, lots of other smaller android devices
+$bp-s: 490px;
+$bp-m: 768px;
+$bp-l: 992px;
+$bp-xl: 1252px;
+$bp-2xl: 1330px;
+
+
+//colors
+$black: #000000;
+$white: #ffffff;
+$red: rgb(240,73, 62); 
+$black90:rgba(0,0,0,0.9);
+
+//font-sizes
+$font-size-2xl: 95pt;
+$font-size-xl: 70pt;
+$font-size-l: 56pt;
+$font-size-m: 44pt;
+$font-size-s: 36pt;
+
+//font weights
+$weight-light: 300;
+$weight-normal: 400;
+$weight-bold: 700;
+$weight-black: 900;
+
+//line heights
+$line-height-low:0.9em;
+$line-height-1: 1.0em;
+$line-height-high:1.2em;
+
+//header height
+$header-height: 70px;

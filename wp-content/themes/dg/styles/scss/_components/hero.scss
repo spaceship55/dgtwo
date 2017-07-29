@@ -1,0 +1,104 @@
+/* home page hero section */
+.hero-wrap{
+  background-color: $black;
+  height: calc(100vh - #{$header-height}); //have to interpolate SCSS vars to make them work in calc()
+
+  .container {
+    height: 100%;
+  }
+}
+
+.hero {
+  height: 100%;
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
+  position:relative;
+
+  @media (min-width: $bp-s){
+    // display:block;
+    // padding: 110px 0 0 0;
+  }
+}
+
+.hero__h1{
+  width: 100%;
+  color: $white;
+  font-size: $font-size-s;
+  line-height: $line-height-1;
+  font-weight: $weight-black;
+  position: relative;
+  display: inline-block;
+  padding-top:30px;
+
+
+  @media (min-width:$bp-s){
+    font-size: $font-size-m;
+  }
+
+  @media (min-width:$bp-m){
+    font-size: $font-size-l;
+    padding-top:70px;
+
+  }
+
+  @media (min-width:$bp-l){
+    font-size: $font-size-xl;
+  }
+
+  @media (min-width:$bp-xl){
+    //no change here
+  }
+
+  //1300px and larger
+  @media (min-width:$bp-2xl){
+    font-size: $font-size-2xl;
+  }
+}
+
+.hero__arrow-down{
+  display: flex;
+  left: 0;
+  width: 100%;
+  align-self: flex-end;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+
+  a{
+    padding:20px 40px;
+    display: block;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+
+    &:hover img {
+      // opacity: 0.8;
+      // transform: translateY(4px);
+      animation: bounce 1s infinite;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+.typed-cursor{
+    background-color:$white;
+    font-weight:$weight-light;
+    opacity: 1;
+    animation: blink 0.8s infinite;
+}
+// @keyframes blink{
+//     0% { opacity:1; }
+//     50% { opacity:0; }
+//     100% { opacity:1; }
+// }
+

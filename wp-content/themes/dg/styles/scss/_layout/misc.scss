@@ -1,0 +1,36 @@
+/* select color */
+::-moz-selection { 
+    background: $red;
+}
+
+::selection {
+    background: $red;
+}
+
+/* some stuff gets set on the body */
+body{
+  //font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  background: $white;
+  width: 100%; //necessary to make body.nav-active behave properly, see hero.scss
+  padding-top: $header-height; //makes the fixed header behave
+}
+
+a {
+  text-decoration: none;
+}
+
+.img-responsive{
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//hero letter spacing//
+.js_typewrite, .js_typewrite1, .js_typewrite2 {
+  letter-spacing: -0.4vw;
+}
+
+.site-header__site-nav ul.menu li a {
+  letter-spacing: -0.4vw;
+}

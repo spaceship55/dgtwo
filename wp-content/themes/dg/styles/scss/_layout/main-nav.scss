@@ -1,0 +1,151 @@
+
+/* site nav */
+.site-header__hamburger{
+  display: block;
+  width: 30px;
+  flex-grow: 0;
+  cursor: pointer;
+
+  span{
+    width: 100%;
+    height: 5px;
+    background-color: $red;
+    display: block;
+    /* only for animated nav toggle function */
+    // transition: all 0.2s ease;
+
+    &:nth-child(2){
+      margin: 3px 0;
+    }
+  }
+}
+.site-header__site-nav{
+  position:fixed;
+  top: -5000px;
+  right: 0;
+  width: 100%;
+  height: calc(100vh + 30px); //extra height b/c view height on mobile changes as the address bar appears/dissapears
+  opacity: 0;
+  background: $black90;
+  color: $white;
+  /* only for animated nav toggle function */
+  // transition: opacity 0.2s ease;
+
+  .menu-menu-1-container{
+    height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+  }
+
+  ul.menu {
+    max-height:100%;
+    padding-top:30px;
+    // height: 630px; //this is the height of the large possible variation of the h1 element. sort of a magic number situation. sorry
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (min-width: $bp-m){
+      padding-top:70px;
+    }
+
+    li {
+      width: 100%;
+      opacity: 0;
+      /* only for animated nav toggle function */
+      // transition: transform 0.5s ease, opacity 0.2s ease;
+
+      &:nth-child(2){
+        transform: translateY(-100%);
+      }
+
+      &:nth-child(3){
+        transform: translateY(-200%);
+      }
+
+      &:nth-child(4){
+        transform: translateY(-300%);
+      }
+
+      a{
+        display:block;
+        font-size: $font-size-s;
+        font-weight: $weight-bold;
+        color: $white;
+        text-decoration: none;
+        /* only for animated nav toggle function */
+        //transition: color 0.1s ease;
+
+        @media (min-width:$bp-s){
+          font-size: $font-size-m;
+        }
+
+        @media (min-width:$bp-m){
+          font-size: $font-size-l;
+        }
+
+        @media (min-width:$bp-l){
+          font-size: $font-size-xl;
+        }
+
+        @media (min-width:$bp-xl){
+          //no change here, hero and nav only size their fonts up at $bp-2xl
+        }
+
+        //1300px and larger
+        @media (min-width:$bp-2xl){
+          font-size: $font-size-2xl;
+        }
+
+        &:hover, &:focus{
+          color: $red;
+        }
+      }
+    }
+  }
+
+  &.nav-active{
+    ul.menu{
+      li {
+        opacity:  1;
+        transform:  translateY(0);
+      }
+    }
+  }
+}
+
+
+
+/* active state */
+body.nav-active {
+  overflow:hidden;
+
+  .site-header__site-nav{
+    top:$header-height;
+    opacity:1;
+    z-index:10;
+  }
+
+  &.nav-fade-out{
+    .site-header__site-nav{
+      opacity:0
+    }
+  }
+}
+
+.site-header__hamburger.nav-active span{
+  &:nth-child(1){
+    opacity:0;
+    transform:translateY(100%);
+  }
+  &:nth-child(2){
+    transform:rotate(45deg);
+    transform-origin: center;
+  }
+  &:nth-child(3){
+    transform:rotate(-45deg) translateY(-5.5px) translateX(5.5px);
+    transform-origin: center;
+
+  }
+}
