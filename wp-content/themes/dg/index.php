@@ -10,9 +10,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 		<div class="container">
 			<div class="hero">
 			  <h1 class="hero__h1 typewrite">
-			  	<span class="js_typewrite1"></span>
-			  	<span class="js_typewrite2"></span>
-			  	<!-- <span class="js_typewrite">We build design driven solutions that launch new business, products, channels &amp; services</span> -->
+			  	<span class="js_typewrite"></span>
 			  </h1>
 			  <div class="hero__arrow-down">
 			  	<a href="#primary">
