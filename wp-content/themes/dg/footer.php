@@ -12,7 +12,7 @@
     <!-- <a class="site-footer__logo" href="<?php //echo esc_url( home_url( '/' ) ); // Link to the home page ?>" title="<?php //echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home">
       <img class="img-responsive site-footer__logo__img" src="<?php //echo get_template_directory_uri(); ?>/img/DG_Logo_102816.svg" alt="Donovan/Green">
     </a> -->
-    <p>footer stuff will go down here</p>
+    <!-- <p>footer stuff will go down here</p> -->
 		<nav class="site-footer__site-nav">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
 		</nav>
