@@ -1,0 +1,36 @@
+/* header */
+.site-header{
+  height: $header-height;
+  background:$white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: transform 0.9s ease-in-out;
+
+  .container{
+    height:100%;
+  }
+}
+
+.site-header__contents{
+  justify-content: space-between;
+  align-items:center;
+  height:100%;
+}
+
+.site-header__logo{
+  color:$red;
+  font-weight:$weight-bold;
+  text-decoration:none;
+  display: block;
+
+  img{
+    max-width:200px;
+  }
+}
+
+.nav-up{
+  top: -66px;
+}
