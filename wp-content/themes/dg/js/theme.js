@@ -92,15 +92,15 @@ function toggleNav(){
  
   
 //Hero typewriter fx July/17 ###//
-  jQuery(document).ready(function() {
-    jQuery('.js_typewrite').typed({
-        strings: [ 'We are a creative consultancy ^3000', 'We are a creative incubator ^3000', 'We are a creative partner for  CEOs and their organizations ^3500' , 'We build design driven solutions that launch new business, products, channels &amp; services ^2000'],
-        contentType: 'html',
-        smartBack: true,
-        showCursor: false,
-        loop:true
-    });
-});
+//   jQuery(document).ready(function() {
+//     jQuery('.js_typewrite').typed({
+//         strings: [ 'We are a creative consultancy ^3000', 'We are a creative incubator ^3000', 'We are a creative partner for  CEOs and their organizations ^3500' , 'We build design driven solutions that launch new business, products, channels &amp; services ^2000'],
+//         contentType: 'html',
+//         smartBack: true,
+//         showCursor: false,
+//         loop:true
+//     });
+// });
 
   
 //END OF FUNCTION()//
